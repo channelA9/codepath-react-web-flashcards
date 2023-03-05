@@ -75,13 +75,13 @@ let flash_key = [
   },
   {
     term: "家",
-    main: "house, home, family, professional, expert, performer",
+    main: "house, home, family, professional",
     sub: "いえ や うち カ ケ",
     JLPT: "N4"
   },
   {
     term: "文",
-    main: "sentence, literature, style, art, decoration, figures, plan, literary",
+    main: "sentence, literature, style, art, decoration",
     sub: "ふみ あや ブン モン",
     JLPT: "N4"
   },

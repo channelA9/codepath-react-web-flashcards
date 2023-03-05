@@ -14,17 +14,27 @@ function App() {
     else toCard(cardN - 1);
   }
 
+  function randCard() {
+    switchFlip(false);
+    toCard(getRandomInt(0,flash_key.length - 1));
+  }
+
   function forwardCard() {
     switchFlip(false);
     if (cardN >= flash_key.length - 1) toCard(0);
     else toCard(cardN + 1);
   }
+  function getRandomInt( min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+  }
 
   return (
     <div className="App">
       <div className="m-auto h-screen w-screen overflow-hidden">
-        <h1 className="m-24 text-4xl  font-black">Kanji Cards</h1>
-        <h3 className="m-24 text-2xl  font-black">Total Number of Cards: {flash_key.length}</h3>
+        <h1 className="m-24 text-3xl  font-black">Kanji Cards</h1>
+        <h3 className="m-24 text-xl  font-black">Total Number of Cards: {flash_key.length}</h3>
         <div className="flex place-items-center  place-content-center">
           <button className="flex-shrink p-8 text-xl" onClick={backCard}>
             <i className="fa-solid fa-arrow-left"></i>
@@ -48,7 +58,7 @@ function App() {
               </motion.div>
             )}
           </button>
-          <button className="flex-shrink p-8 text-xl" onClick={forwardCard}>
+          <button className="flex-shrink p-8 text-xl" onClick={randCard}>
             <i className="fa-solid fa-arrow-right"></i>
           </button>
         </div>
