@@ -1,5 +1,4 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Back = (props: { main: string; sub: string; JLPT: string}) => {
   return (

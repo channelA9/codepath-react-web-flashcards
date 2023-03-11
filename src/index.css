@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.blank {
+    background: #fff;
+}
+
+.wrong {
+    background: #FFCCCC;
+    opacity: 1;
+}
+
+.right {
+    background: #CCFFCC;
+    opacity: 1;
+}
